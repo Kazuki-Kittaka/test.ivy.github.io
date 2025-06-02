@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>崩壊スターレイル - ファンサイト</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">崩壊スターレイル</div>
+            <ul class="nav-links">
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#characters">キャラクター</a></li>
+                <li><a href="#game-info">ゲーム情報</a></li>
+                <li><a href="#news">ニュース</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content fade-in">
+                <h1>崩壊スターレイル</h1>
+                <p>銀河を駆け抜ける壮大な冒険が、今始まる</p>
+                <a href="#game-info" class="cta-button">冒険を始める</a>
+            </div>
+        </section>
+
+        <section id="characters" class="section">
+            <h2>人気キャラクター</h2>
+            <div class="character-grid">
+                <div class="character-card fade-in">
+                    <div class="character-avatar">★</div>
+                    <h3>三月なのか</h3>
+                    <p>氷属性の少女。記憶を失いながらも明るく前向きな性格で、列車の仲間たちと共に冒険を続けている。</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-avatar">⚡</div>
+                    <h3>開拓者</h3>
+                    <p>星芯を体内に宿す謎多き存在。プレイヤーの分身として、宇宙の真理を求めて旅を続ける。</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-avatar">🔥</div>
+                    <h3>ヒメコ</h3>
+                    <p>星穹列車の航海士。豊富な知識と経験を持ち、仲間たちを導く頼れる大人の女性。</p>
+                </div>
+                <div class="character-card fade-in">
+                    <div class="character-avatar">⭐</div>
+                    <h3>ヴェルト</h3>
+                    <p>重力を操る力を持つ謎めいた男性。深い知識と冷静な判断力で仲間をサポートする。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-info" class="section">
+            <h2>ゲーム情報</h2>
+            <div class="game-info fade-in">
+                <h3>銀河を駆け抜ける冒険</h3>
+                <p>崩壊スターレイルは、美しい3Dグラフィックスと壮大なストーリーが魅力のターン制RPGです。様々な惑星を探索し、個性豊かなキャラクターたちと共に宇宙の謎に迫りましょう。</p>
+                
+                <div class="feature-list">
+                    <div class="feature-item fade-in">
+                        <h4>戦略的バトル</h4>
+                        <p>属性相性やスキルの組み合わせを活かした奥深いターン制バトルシステム</p>
+                    </div>
+                    <div class="feature-item fade-in">
+                        <h4>美麗なグラフィック</h4>
+                        <p>最新技術により描かれる美しい宇宙と個性豊かなキャラクターたち</p>
+                    </div>
+                    <div class="feature-item fade-in">
+                        <h4>豊富なコンテンツ</h4>
+                        <p>メインストーリーから様々なサイドクエスト、イベントまで楽しめる</p>
+                    </div>
+                    <div class="feature-item fade-in">
+                        <h4>継続的アップデート</h4>
+                        <p>定期的な新キャラクター追加やストーリー更新で常に新鮮な体験</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="section">
+            <h2>最新ニュース</h2>
+            <div class="game-info fade-in">
+                <h3>🌟 新バージョン情報</h3>
+                <p>新たな惑星とキャラクターが登場予定！詳細は公式サイトをチェックしてください。</p>
+                
+                <h3>🎉 イベント開催中</h3>
+                <p>期間限定イベント「星海祭」開催中！豪華報酬を手に入れるチャンスです。</p>
+                
+                <h3>⚔️ 新機能追加</h3>
+                <p>チーム編成の新機能や戦闘システムの改良により、より戦略的なバトルが楽しめます。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 崩壊スターレイル ファンサイト. このサイトは非公式のファンサイトです。</p>
+            <p>ゲームの公式情報は <strong>miHoYo</strong> の公式サイトをご確認ください。</p>
+        </div>
+    </footer>
+
+    <script>
+        // スムーススクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // スクロールアニメーション
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // アニメーション対象要素を監視
+        document.querySelectorAll('.character-card, .feature-item, .game-info').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
